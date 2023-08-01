@@ -1,8 +1,7 @@
 import React from "react";
 
 export default function Fif({ data }) {
-  const tgl_entri = data[0].tgl_entri;
-  const tujuan = data[0].tujuan;
+  const { tgl_entri, tujuan, sn } = data[0];
   const { nama, admin, denda, collfee, ptag, tagihan, total_tagihan } =
     data[0].tambahan;
   const today = new Date();
@@ -10,7 +9,6 @@ export default function Fif({ data }) {
   const mm = String(today.getMonth() + 1).padStart(2, "0");
   const yyyy = today.getFullYear();
   const formattedDate = `${dd}-${mm}-${yyyy}`;
-  const sn = data[0].sn;
 
   return (
     <div

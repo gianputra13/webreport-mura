@@ -1,9 +1,7 @@
 import React from "react";
 
 export default function Bpjs({ data }) {
-  const tgl_entri = data[0].tgl_entri;
-  const tujuan = data[0].tujuan;
-  const sn = data[0].sn;
+  const { tgl_entri, tujuan, sn } = data[0];
   const { nama, tagihan, admin, periode, cbg, peserta, total_tagihan } =
     data[0].tambahan;
 

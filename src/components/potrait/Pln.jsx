@@ -1,8 +1,7 @@
 import React from "react";
 
 export default function Pln({ data }) {
-  const sn = data[0].sn;
-  const tujuan = data[0].tujuan;
+  const { tujuan, sn } = data[0];
   const {
     nama,
     tarif_daya,

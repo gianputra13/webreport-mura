@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Pln({ data }) {
-  const tujuan = data[0].tujuan;
+  const { tujuan, tgl_entri } = data[0];
   const {
     nama,
     tarif_daya,
@@ -12,7 +12,6 @@ export default function Pln({ data }) {
     total_tagihan,
   } = data[0].tambahan;
   const denda = data[0].tambahan.denda ? data[0].tambahan.denda : 0;
-  const tgl_entri = data[0].tgl_entri;
   const date = new Date(tgl_entri);
   const day = String(date.getDate()).padStart(2, "0");
   const month = String(date.getMonth() + 1).padStart(2, "0");

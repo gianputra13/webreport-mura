@@ -1,8 +1,7 @@
 import React from "react";
 
 export default function PlnToken({ data }) {
-  let tgl_entri = data[0].tgl_entri;
-  let harga = data[0].harga;
+  let { tgl_entri, harga } = data[0];
   const {
     nama,
     id_meteran,

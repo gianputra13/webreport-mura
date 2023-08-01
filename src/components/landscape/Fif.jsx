@@ -1,12 +1,11 @@
 import React from "react";
 
 export default function Fif({ data }) {
-  const tgl_entri = data[0].tgl_entri;
-  const tujuan = data[0].tujuan;
-  const { nama, admin, denda, collfee, ptag, tagihan, total_tagihan } = data[0].tambahan;
+  const { tgl_entri, tujuan, sn } = data[0];
+  const { nama, admin, denda, collfee, ptag, tagihan, total_tagihan } =
+    data[0].tambahan;
   console.log(data[0].tambahan);
-  const sn = data[0].sn;
-  
+
   return (
     <table
       width="800"

@@ -1,9 +1,7 @@
 import React from "react";
 
 export default function PlnToken({ data }) {
-  const harga = data[0].harga;
-  const sn = data[0].sn;
-
+  const { harga, sn } = data[0];
   const {
     id_meteran,
     id_pelanggan,
@@ -18,7 +16,7 @@ export default function PlnToken({ data }) {
     admin,
   } = data[0].tambahan;
 
-  const total = parseInt(harga) + parseInt(admin) + parseInt(rp_token);
+  const total = parseInt(harga) + parseInt(admin);
   const today = new Date();
   const dd = String(today.getDate()).padStart(2, "0");
   const mm = String(today.getMonth() + 1).padStart(2, "0");
