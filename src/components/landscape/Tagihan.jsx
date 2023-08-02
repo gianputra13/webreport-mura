@@ -4,6 +4,7 @@ export default function Tagihan({ data }) {
   const { tgl_entri, tujuan, sn } = data[0];
   const { nama, admin, periode, tagihan, total_tagihan } = data[0].tambahan;
   const denda = data[0].tambahan.denda ? data[0].tambahan.denda : 0;
+
   return (
     <table
       width="800"

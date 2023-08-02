@@ -17,6 +17,7 @@ export default function Pln({ data }) {
   const month = String(date.getMonth() + 1).padStart(2, "0");
   const year = date.getFullYear();
   const tanggal = `${day}-${month}-${year}`;
+
   return (
     <table
       className="page-break"

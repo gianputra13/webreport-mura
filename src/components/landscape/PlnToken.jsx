@@ -15,6 +15,7 @@ export default function PlnToken({ data }) {
     materai,
   } = data[0].tambahan;
   let total = parseInt(harga) + parseInt(admin);
+
   return (
     <table
       className="page-break"
