@@ -30,6 +30,7 @@ export default function PlnToken({ data }) {
         fontSize: "11px",
         padding: "2mm",
         width: "80mm",
+        margin: "0 auto",
       }}
     >
       <center>STRUK PEMBELIAN LISTRIK PRABAYAR</center>

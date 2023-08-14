@@ -5,7 +5,7 @@ import PlnToken from "./potrait/PlnToken";
 import Tagihan from "./potrait/Tagihan";
 import Fif from "./potrait/Fif";
 
-export default function printContent({ data }) {
+export default function PrintContent({ data }) {
   let kode_produk = data[0].kode_produk;
 
   if (kode_produk === "BYRPLN") {

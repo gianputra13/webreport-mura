@@ -13,6 +13,7 @@ export default function Bpjs({ data }) {
         fontFamily: "Arial",
         fontSize: "11px",
         padding: " 0 0 0 0",
+        margin: "0 auto",
       }}
     >
       <tr align="center">
