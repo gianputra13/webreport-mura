@@ -15,6 +15,7 @@ export default function PlnToken({ data }) {
     materai,
   } = data[0].tambahan;
   let total = parseInt(harga) + parseInt(admin);
+  const [tanggal] = tgl_entri.split(" ");
 
   return (
     <table
@@ -42,7 +43,7 @@ export default function PlnToken({ data }) {
             <tr>
               <td>TGL BELI</td>
               <td>:</td>
-              <td>&nbsp; {tgl_entri}</td>
+              <td>&nbsp; {tanggal}</td>
             </tr>
             <tr>
               <td>NO METER</td>

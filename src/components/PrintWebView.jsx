@@ -3,9 +3,12 @@ import { useLocation } from "react-router-dom"
 import axios from "axios";
 import PrintContent from "./PrintContent";
 import PrintContentLandscape from "./PrintContentLandscape";
+import ErrorNotFound from "./ErrorNotFound";
 
 const PrintWebView = () => {
-  const [dataForPrint, setDataForPrint] = useState({});
+  const [dataForPrint, setDataForPrint] = useState([]);
+  const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const { search } = useLocation();
   const searchParams = new URLSearchParams(search);
@@ -21,7 +24,8 @@ const PrintWebView = () => {
         });
         setDataForPrint(dataPrint.data.data);
       } catch (error) {
-        throw new Error(error);
+        setIsError(true);
+        setErrorMessage(error.response.data.message);
       }
     };
     printDetail();
@@ -29,12 +33,13 @@ const PrintWebView = () => {
 
   return (
     <Fragment>
-      { dataForPrint.length && (
-        mode === "potrait" ?
-          (<PrintContent data={dataForPrint} />) : 
-            (<PrintContentLandscape data={dataForPrint} />)
-        )
-      }
+      {!isError && dataForPrint.length ? (
+        dataForPrint.length && (
+          mode === "potrait" ?
+            (<PrintContent data={dataForPrint} />) : 
+              (<PrintContentLandscape data={dataForPrint} />)
+          )
+      ) : (<ErrorNotFound message={errorMessage} />)}
     </Fragment>
   );
 };

@@ -12,11 +12,12 @@ export default function Pln({ data }) {
     total_tagihan,
   } = data[0].tambahan;
   const denda = data[0].tambahan.denda ? data[0].tambahan.denda : 0;
-  const date = new Date(tgl_entri);
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const year = date.getFullYear();
-  const tanggal = `${day}-${month}-${year}`;
+  // const date = new Date(tgl_entri);
+  // const day = String(date.getDate()).padStart(2, "0");
+  // const month = String(date.getMonth() + 1).padStart(2, "0");
+  // const year = date.getFullYear();
+  // // const tanggal = `${day}-${month}-${year}`;
+  const [tanggal] = tgl_entri.split(" ");
 
   return (
     <table
