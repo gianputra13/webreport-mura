@@ -68,9 +68,9 @@ def deployToFTP(configName, remoteDirectory) {
                     transfers: [
                         // Konfigurasi pengiriman file
                         [
-                            sourceFiles: "dist/**/*", // Pola file yang akan diunggah
+                            sourceFiles: "build/**/*", // Pola file yang akan diunggah
                             remoteDirectory: remoteDirectory, // Direktori remote di server FTP
-                            removePrefix: "dist", // Hapus prefiks direktori lokal
+                            removePrefix: "build", // Hapus prefiks direktori lokal
                             flatten: false, // Apakah mempertahankan struktur direktori
                         ]
                     ]
