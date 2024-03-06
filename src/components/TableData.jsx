@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PrintButton from "./PrintButton";
 import SearchButton from "./SearchButton";
 import PrintContent from "./PrintContent";
@@ -106,9 +106,6 @@ export default function TableData() {
     newWindow.print();
   };
 
-  useEffect(() => {
-    const testFunction = () => (handlePrintPotrait())
-  })
   return (
     <div className="container-fluid mt-5">
       <div className="row">
